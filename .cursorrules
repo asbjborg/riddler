@@ -1,0 +1,78 @@
+# Cursor Development Rules
+
+## Commit Message Standards
+
+We follow the [Conventional Commits](https://www.conventionalcommits.org/) specification. Commit messages should follow this format:
+
+```text
+<type>(<scope>): <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+### Types
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation changes
+- `style`: Code style changes (formatting, etc)
+- `refactor`: Code restructuring
+- `perf`: Performance improvements
+- `test`: Adding/fixing tests
+- `chore`: Tooling and maintenance
+
+### Scopes
+- `core`: Core addon functionality
+- `ui`: User interface components
+- `quiz`: Quiz/question related changes
+- `db`: Database/storage changes
+- `loc`: Localization
+- `deps`: Dependencies
+- `tools`: Development tools and scripts
+
+### Examples
+```text
+feat(ui): add score display panel
+fix(core): prevent duplicate questions
+docs(readme): update installation steps
+```
+
+For more detailed commit standards, see `docs/commit-standards.md`.
+
+## Creating Pull Requests from Terminal
+
+This repository includes a custom zsh function for creating pull requests directly from the terminal. The function is defined in your home directory's `.zshrc` file (`~/.zshrc`).
+
+### Prerequisites
+- GitHub token stored in macOS keychain with name "github-riddler-token"
+- `curl` and `jq` installed
+- Git repository configured with remote set to this repository
+
+### Usage
+
+```bash
+create_pr "Your PR Title" "Your PR Description" [base_branch]
+```
+
+#### Parameters:
+1. Title (required): The title of your pull request
+2. Body (required): The description/body of your pull request
+3. Base Branch (optional): The target branch for the PR (defaults to 'main')
+
+#### Example:
+```bash
+create_pr "feat(ui): add score display" "Implements the score display panel for the quiz interface"
+```
+
+### Notes
+- The PR will be created from your current branch to the specified base branch
+- The function uses the GitHub API with authentication from your stored token
+- Follow conventional commit format for PR titles:
+  - feat: New feature
+  - fix: Bug fix
+  - docs: Documentation changes
+  - style: Code style changes
+  - refactor: Code refactoring
+  - test: Adding tests
+  - chore: Maintenance tasks 

@@ -33,6 +33,7 @@ The scope should be the area of the addon being modified:
 - `db`: Database/storage changes
 - `loc`: Localization
 - `deps`: Dependencies
+- `tools`: Development tools and scripts
 
 ## Examples
 
@@ -42,6 +43,7 @@ fix(core): prevent duplicate questions in same session
 docs(readme): update installation instructions
 style(ui): improve button alignment
 refactor(quiz): simplify question loading logic
+chore(tools): update PR creation script
 ```
 
 ## Commit Validation

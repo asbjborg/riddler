@@ -1,1 +1,24 @@
- 
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Lua specific
+*.lua~
+luac.out
+
+# WoW specific
+WTF/
+Cache/
+Screenshots/
+Logs/ 

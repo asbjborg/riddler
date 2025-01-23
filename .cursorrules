@@ -40,39 +40,41 @@ docs(readme): update installation steps
 
 For more detailed commit standards, see `docs/commit-standards.md`.
 
-## Creating Pull Requests from Terminal
+## GitHub Commands
 
-This repository includes a custom zsh function for creating pull requests directly from the terminal. The function is defined in your home directory's `.zshrc` file (`~/.zshrc`).
+This repository includes several shell functions for interacting with GitHub. These commands are available after sourcing the commands file:
 
-### Prerequisites
+```bash
+source scripts/github-commands.sh
+```
+
+### Creating Pull Requests
+```bash
+create_pr "Your PR Title" "Your PR Description"
+```
+
+### Checking Issues
+- `check_features`: List open feature requests
+- `check_bugs`: List open bug reports
+- `check_issues`: List all open issues with labels
+
+#### Prerequisites
 - GitHub token stored in macOS keychain with name "github-riddler-token"
 - `curl` and `jq` installed
 - Git repository configured with remote set to this repository
 
-### Usage
-
+#### Example Usage
 ```bash
-create_pr "Your PR Title" "Your PR Description" [base_branch]
-```
-
-#### Parameters:
-1. Title (required): The title of your pull request
-2. Body (required): The description/body of your pull request
-3. Base Branch (optional): The target branch for the PR (defaults to 'main')
-
-#### Example:
-```bash
+# Create a PR
 create_pr "feat(ui): add score display" "Implements the score display panel for the quiz interface"
+
+# Check issues
+check_features  # List feature requests
+check_bugs     # List bug reports
+check_issues   # List all issues with labels
 ```
 
 ### Notes
-- The PR will be created from your current branch to the specified base branch
-- The function uses the GitHub API with authentication from your stored token
-- Follow conventional commit format for PR titles:
-  - feat: New feature
-  - fix: Bug fix
-  - docs: Documentation changes
-  - style: Code style changes
-  - refactor: Code refactoring
-  - test: Adding tests
-  - chore: Maintenance tasks 
+- PRs will be created from your current branch to main
+- The commands use the GitHub API with authentication from your stored token
+- Follow conventional commit format for PR titles (see Commit Message Standards above) 

@@ -1,0 +1,43 @@
+name: Pull Request Checks
+
+on:
+  pull_request:
+    branches: 
+      - main
+      - develop
+
+jobs:
+  pr-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Check PR title
+        uses: amannn/action-semantic-pull-request@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: |
+            feat
+            fix
+            docs
+            style
+            refactor
+            perf
+            test
+            chore
+          scopes: |
+            core
+            ui
+            quiz
+            db
+            loc
+            deps
+            workflow
+            standards
+      
+      - name: Block merge on WIP
+        if: contains(github.event.pull_request.title, 'WIP') || contains(github.event.pull_request.title, '[WIP]')
+        run: |
+          echo "This PR is marked as Work in Progress"
+          exit 1 

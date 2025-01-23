@@ -9,16 +9,19 @@ Our pipeline automates testing, building, and releasing of the Riddler addon usi
 ## Pipeline Stages
 
 ### 1. Testing
+
 - Lua syntax validation
 - Unit tests (when implemented)
 - Integration tests (when implemented)
 
 ### 2. Building
+
 - Package addon files
 - Generate release artifacts
 - Version number validation
 
 ### 3. Deployment
+
 - Automatic releases on version tags
 - GitHub release creation
 - Changelog generation
@@ -38,4 +41,4 @@ Our pipeline automates testing, building, and releasing of the Riddler addon usi
 - [ ] Add automated version number updates in .toc file
 - [ ] Implement automated changelog generation
 - [ ] Add code quality checks
-- [ ] Set up automated dependency updates 
+- [ ] Set up automated dependency updates

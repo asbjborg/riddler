@@ -23,6 +23,7 @@
 ## Protection Rules
 
 ### Main Branch
+
 - No direct pushes
 - Requires pull request
 - Requires approval from at least one reviewer
@@ -30,11 +31,13 @@
 - Must have linear history (no merge commits)
 
 ### Develop Branch
+
 - No direct pushes
 - Requires pull request
 - Must pass all status checks
 
 ## Status Checks Required
+
 - Commit message validation
 - Code style checks (coming soon)
-- Tests (coming soon) 
+- Tests (coming soon)

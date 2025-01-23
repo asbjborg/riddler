@@ -4,7 +4,7 @@ We follow the [Conventional Commits](https://www.conventionalcommits.org/) speci
 
 ## Format
 
-```
+```text
 <type>(<scope>): <description>
 
 [optional body]
@@ -26,6 +26,7 @@ We follow the [Conventional Commits](https://www.conventionalcommits.org/) speci
 ## Scope
 
 The scope should be the area of the addon being modified:
+
 - `core`: Core addon functionality
 - `ui`: User interface components
 - `quiz`: Quiz/question related changes
@@ -35,7 +36,7 @@ The scope should be the area of the addon being modified:
 
 ## Examples
 
-```
+```text
 feat(ui): add score display panel
 fix(core): prevent duplicate questions in same session
 docs(readme): update installation instructions
@@ -45,4 +46,4 @@ refactor(quiz): simplify question loading logic
 
 ## Commit Validation
 
-We use GitHub Actions to validate commit messages. Invalid commit messages will be flagged during pull requests. 
+We use GitHub Actions to validate commit messages. Invalid commit messages will be flagged during pull requests.

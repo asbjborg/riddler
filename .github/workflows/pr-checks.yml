@@ -35,6 +35,7 @@ jobs:
             deps
             workflow
             standards
+            tools
       
       - name: Block merge on WIP
         if: contains(github.event.pull_request.title, 'WIP') || contains(github.event.pull_request.title, '[WIP]')

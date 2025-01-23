@@ -17,3 +17,4 @@ Riddler aims to bring back the joy of in-game trivia to World of Warcraft, carry
 ## License
 
 Riddler is completely open source under the MIT License. We believe in the power of community collaboration - feel free to contribute, fork, or learn from our code!
+# Development

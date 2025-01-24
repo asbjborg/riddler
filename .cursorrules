@@ -13,6 +13,7 @@ We follow the [Conventional Commits](https://www.conventionalcommits.org/) speci
 ```
 
 ### Types
+
 - `feat`: New feature
 - `fix`: Bug fix
 - `docs`: Documentation changes
@@ -23,6 +24,7 @@ We follow the [Conventional Commits](https://www.conventionalcommits.org/) speci
 - `chore`: Tooling and maintenance
 
 ### Scopes
+
 - `core`: Core addon functionality
 - `ui`: User interface components
 - `quiz`: Quiz/question related changes
@@ -32,6 +34,7 @@ We follow the [Conventional Commits](https://www.conventionalcommits.org/) speci
 - `tools`: Development tools and scripts
 
 ### Examples
+
 ```text
 feat(ui): add score display panel
 fix(core): prevent duplicate questions
@@ -49,21 +52,25 @@ source scripts/github-commands.sh
 ```
 
 ### Creating Pull Requests
+
 ```bash
 create_pr "Your PR Title" "Your PR Description"
 ```
 
 ### Checking Issues
+
 - `check_features`: List open feature requests
 - `check_bugs`: List open bug reports
 - `check_issues`: List all open issues with labels
 
 #### Prerequisites
+
 - GitHub token stored in macOS keychain with name "github-riddler-token"
 - `curl` and `jq` installed
 - Git repository configured with remote set to this repository
 
 #### Example Usage
+
 ```bash
 # Create a PR
 create_pr "feat(ui): add score display" "Implements the score display panel for the quiz interface"
@@ -75,6 +82,7 @@ check_issues   # List all issues with labels
 ```
 
 ### Notes
+
 - PRs will be created from your current branch to main
 - The commands use the GitHub API with authentication from your stored token
-- Follow conventional commit format for PR titles (see Commit Message Standards above) 
+- Follow conventional commit format for PR titles (see Commit Message Standards above)

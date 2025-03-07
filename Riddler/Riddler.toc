@@ -1,0 +1,20 @@
+## Interface: 100200
+## Title: Riddler
+## Version: 0.0.3
+## Notes: In-game trivia quiz addon, spiritual successor to TriviaBot
+## Author: Riddler Team
+## SavedVariables: RiddlerDB
+## X-Category: Quizzes, Games, Guild
+
+# Core files
+Core\JSON.lua
+Core\QuizEngine.lua
+Core\Storage.lua
+Core\UI.lua
+Core\Sharing.lua
+
+# Data files
+Data\Templates\general_wow.lua
+
+# Main addon file
+Riddler.lua 
